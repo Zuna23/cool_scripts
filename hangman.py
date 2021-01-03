@@ -60,17 +60,17 @@ def print_scaffold(guesses, wd): # prints the scaffold
 				print ("|	/ \ ")
 				print ("|________")
 				print ("\n")
-				print ("The word was %s.") %wd
+				print ("The word was {}.".format(wd))
 				print ("\n")
 				print ("\nYOU LOSE! TRY AGAIN!(")
 				print ("\nWould you like to play again, type 1 for yes or 2 for no?")
-				again = str(raw_input((">")))
+				again = str(input((">")))
 				again = again.lower()
 				if again == ("1"):
 				  hangMan()
 				return
 
-def selectWord(min_length=7, filename=r"C:\Users\T440P\Documents\words.txt"):
+def selectWord(min_length=7, filename=r"C:\Users\T440P\Documents\GitHub\cool_scripts\words.txt"):
     min_line_length = min_length + 1
     with open(filename) as wordbook:
         large_words = [line for line in wordbook if len(line) >= min_line_length]
@@ -82,7 +82,7 @@ def selectWord(min_length=7, filename=r"C:\Users\T440P\Documents\words.txt"):
 
 def hangMan():
   guesses = 0					
-  word = selectWord(7,r"C:\Users\T440P\Documents\words.txt")				
+  word = selectWord(7,r"C:\Users\T440P\Documents\GitHub\cool_scripts\words.txt")				
   word_list = list(word)	
   blanks = ("_")*len(word)	
   blanks_list = list(blanks) 
@@ -135,7 +135,7 @@ def hangMan():
   						  print ("Would you like to play again?")
   						  print ("Type 1 for yes or 2 for no.")
   						  again = str(input(("> ")))
-  						  if again == (")1("):
+  						  if again == ("1"):
   						    hangMan()
   						  quit()
   						

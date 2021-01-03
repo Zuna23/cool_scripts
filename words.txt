@@ -1,0 +1,6 @@
+elephant
+dog
+cat
+mouse
+chicken
+zebra
